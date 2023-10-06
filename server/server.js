@@ -40,7 +40,7 @@ app.post('/todos', auth, (req, res) => {
     res.send(newToDo);
 });
 
-app.put('/todos/:id', auth, ownToDo, (req, res) => {
+app.put('/todos/:id', auth, ownToDo, (req, res) => {    
     const id = parseInt(req.params.id);
     const toDo = toDos.find(toDo => toDo.id === id);
     // toggle completed
